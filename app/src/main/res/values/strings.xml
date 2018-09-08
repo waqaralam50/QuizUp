@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">QuizUp</string>
     <string name="new_account">OR create a new account</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="str_next">Next</string>
+    <string name="title_activity_result">Results!!!</string>
+
+    <string name="settings_menu_item">Settings</string>
+
 </resources>

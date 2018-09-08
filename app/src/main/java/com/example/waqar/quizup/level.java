@@ -18,7 +18,7 @@ public class level extends AppCompatActivity {
         text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(level.this,questions.class);
+                Intent i=new Intent(level.this,QuizActivity.class);
                 startActivity(i);
             }
         });
@@ -26,7 +26,7 @@ public class level extends AppCompatActivity {
         text1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(level.this,questions.class);
+                Intent i=new Intent(level.this,QuizActivity.class);
                 startActivity(i);
             }
         });
@@ -34,7 +34,7 @@ public class level extends AppCompatActivity {
         text2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(level.this,questions.class);
+                Intent i=new Intent(level.this,QuizActivity.class);
                 startActivity(i);
             }
         });

@@ -1,35 +1,66 @@
 package com.example.waqar.quizup;
-
 public class Question {
-private String question;
-private String[] choice=new String[4];
-private  String answer;
-
-public Question(){
-
-}
-public Question(String question,String[] choices,String answer){
-    this.question=question;
-    this.choice[0]=choices[0];
-    this.choice[1]=choices[1];
-    this.choice[2]=choices[2];
-    this.choice[3]=choices[3];
-    this.answer=answer;
-}
-
-    public String getQuestion() {
-        return question;
+    private int ID;
+    private String QUESTION;
+    private String OPTA;
+    private String OPTB;
+    private String OPTC;
+    private String ANSWER;
+    public Question()
+    {
+        ID=0;
+        QUESTION="";
+        OPTA="";
+        OPTB="";
+        OPTC="";
+        ANSWER="";
     }
+    public Question(String qUESTION, String oPTA, String oPTB, String oPTC,
+                    String aNSWER) {
 
-    public String getChoice(int i) {
-        return choice[i];
+        QUESTION = qUESTION;
+        OPTA = oPTA;
+        OPTB = oPTB;
+        OPTC = oPTC;
+        ANSWER = aNSWER;
     }
-
-    public String getAnswer() {
-        return answer;
+    public int getID()
+    {
+        return ID;
     }
-    public void setAnswer(String answer){this.answer=answer;}
-public void setChoice(int i,String choice){this.choice[i]=choice;}
-public void setQuestion(String question){this.question=question;}
+    public String getQUESTION() {
+        return QUESTION;
+    }
+    public String getOPTA() {
+        return OPTA;
+    }
+    public String getOPTB() {
+        return OPTB;
+    }
+    public String getOPTC() {
+        return OPTC;
+    }
+    public String getANSWER() {
+        return ANSWER;
+    }
+    public void setID(int id)
+    {
+        ID=id;
+    }
+    public void setQUESTION(String qUESTION) {
+        QUESTION = qUESTION;
+    }
+    public void setOPTA(String oPTA) {
+        OPTA = oPTA;
+    }
+    public void setOPTB(String oPTB) {
+        OPTB = oPTB;
+    }
+    public void setOPTC(String oPTC) {
+        OPTC = oPTC;
+    }
+    public void setANSWER(String aNSWER) {
+        ANSWER = aNSWER;
+    }
 
 }
