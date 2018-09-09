@@ -54,7 +54,7 @@ public class QuizActivity extends AppCompatActivity {
                 }
                 if(qid<5){
                     currentQ=quesList.get(qid);
-                    grp.check(R.id.radio0);
+                    grp.check(R.id.radio1);
                     setQuestionView();
                 }
 
