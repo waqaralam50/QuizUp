@@ -4,14 +4,31 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-public class ResultActivity extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+public class ResultActivity extends AppCompatActivity implements View.OnClickListener{
+private FirebaseAuth firebaseAuth;
+private TextView textViewUserEmail;
+private Button buttonLogout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        firebaseAuth=FirebaseAuth.getInstance();
+        if (firebaseAuth.getCurrentUser()==null){
+            finish();
+            startActivity(new Intent(this,signup.class));
+        }
+FirebaseUser user=firebaseAuth.getCurrentUser();
+        textViewUserEmail=(TextView)findViewById(R.id.email);
+        textViewUserEmail.setText("Welcome"+"  "+user.getEmail());
+        buttonLogout=(Button)findViewById(R.id.logout);
         //get rating bar objectr
         RatingBar bar=(RatingBar)findViewById(R.id.ratingBar1);
         bar.setNumStars(5);
@@ -38,6 +55,7 @@ public class ResultActivity extends AppCompatActivity {
             case 5:t.setText(" Whao, you have 100%, Who are you? An Android Jet brain");
                 break;
         }
+        buttonLogout.setOnClickListener(this);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -57,4 +75,12 @@ public class ResultActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onClick(View v) {
+if (v==buttonLogout){
+    firebaseAuth.signOut();
+    finish();
+    startActivity(new Intent(this,signup.class));
+}
+    }
 }

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "984345157968",
+    "firebase_url": "https://androidquizup-8eaa6.firebaseio.com",
+    "project_id": "androidquizup-8eaa6",
+    "storage_bucket": "androidquizup-8eaa6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984345157968:android:fa20a85e467804ce",
+        "android_client_info": {
+          "package_name": "com.example.waqar.quizup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984345157968-hokvj9t4ekp2lg9sevdhe4m449or92fq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgN6nDymtzTsThSYLQVqCTHzSIubYJGhA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

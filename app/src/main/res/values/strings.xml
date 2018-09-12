@@ -1,11 +1,15 @@
 <resources>
     <string name="app_name">QuizUp</string>
-    <string name="new_account">OR create a new account</string>
+    <string name="new_account">Already have an account?Click Here</string>
+    <string name="directlogin">OR Instead login with</string>
+    <string name="new_register">OR Register Here!</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="str_next">Next</string>
     <string name="title_activity_result">Results!!!</string>
+    <string name="facebook_app_id">316118592486201</string>
+    <string name="fb_login_protocol_scheme">fb316118592486201</string>
 
     <string name="settings_menu_item">Settings</string>
 

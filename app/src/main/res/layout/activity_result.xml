@@ -33,4 +33,28 @@
             android:textColor="@color/colorWhite" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="236dp"
+        android:background="@drawable/rectangle3"
+        android:inputType="textImeMultiLine"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="alam.waqar50@gmail.com"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="125dp"
+        android:text="Logout"
+        android:background="@drawable/r"/>
+
 </RelativeLayout>
