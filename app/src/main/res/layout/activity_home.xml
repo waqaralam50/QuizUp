@@ -49,10 +49,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.369" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="182dp"
+        android:layout_height="21dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -61,29 +62,10 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.929"
-        app:srcCompat="@drawable/google" />
-
-    <ImageView
-        android:id="@+id/facebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.596"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.929"
-        app:srcCompat="@drawable/fb" />
+        app:layout_constraintVertical_bias="0.908"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editText3"
@@ -111,7 +93,7 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="236dp"
-        android:layout_height="34dp"
+        android:layout_height="36dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -128,29 +110,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.623"
-        tools:textColor="@android:color/holo_red_dark" />
-
-    <TextView
-        android:id="@+id/directlogin"
-        android:layout_width="236dp"
-        android:layout_height="34dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-
-        android:clickable="true"
-        android:text="@string/directlogin"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.866"
         tools:textColor="@android:color/holo_red_dark" />
 
 </android.support.constraint.ConstraintLayout>

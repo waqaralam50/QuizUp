@@ -9,17 +9,17 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.CallbackManager;
-  import com.facebook.FacebookCallback;
-  import com.facebook.FacebookException;
-  import com.facebook.FacebookSdk;
-  import com.facebook.login.LoginManager;
-  import com.facebook.login.LoginResult;
-  import com.google.android.gms.tasks.OnCompleteListener;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,16 +28,56 @@ import com.google.firebase.auth.FirebaseAuth;
     private TextView text;
     private Button btn;
       private TextView loginfb;
-    ImageView login_button;
+    private Button login_button;
     private EditText editTextEmail;
     private EditText editTextPassword;
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
     CallbackManager callbackManager;
+
+      @Override
+      protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+          callbackManager.onActivityResult(requestCode, resultCode, data);
+          super.onActivityResult(requestCode, resultCode, data);
+      }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FacebookSdk.sdkInitialize(getApplicationContext());
+
+        callbackManager=CallbackManager.Factory.create();
+        login_button=findViewById(R.id.login_button);
+
+        callbackManager = CallbackManager.Factory.create();
+
+
+
+        LoginManager.getInstance().registerCallback(callbackManager,
+                new FacebookCallback<LoginResult>() {
+                    @Override
+                    public void onSuccess(LoginResult loginResult) {
+                        // App code
+                        progressDialog.setMessage("signing in u to app........");
+                        progressDialog.show();
+                        startActivity(new Intent(getApplicationContext(),level.class));
+
+                    }
+
+                    @Override
+                    public void onCancel() {
+                        // App code
+                        startActivity(new Intent(HomeActivity.this,signup.class));
+                    }
+
+                    @Override
+                    public void onError(FacebookException exception) {
+                           progressDialog.setMessage("signing in.......");
+                                               progressDialog.show();
+                        startActivity(new Intent(getApplicationContext(),level.class));
+                    }
+                });
+            FacebookSdk.sdkInitialize(getApplicationContext());
+            AppEventsLogger.activateApp(this);
+
 
         setContentView(R.layout.activity_home);
         firebaseAuth=firebaseAuth.getInstance();
@@ -50,7 +90,8 @@ import com.google.firebase.auth.FirebaseAuth;
         editTextPassword=findViewById(R.id.editText3);
         btn=findViewById(R.id.button);
         text=findViewById(R.id.textView);
-        loginfb=findViewById(R.id.directlogin);
+
+
         progressDialog=new ProgressDialog(this);
 //        btn.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -62,40 +103,40 @@ import com.google.firebase.auth.FirebaseAuth;
 //        });
 btn.setOnClickListener(this);
 text.setOnClickListener(this);
-initializecontrols();
-loginwithfb();
+
+
+
+//initializecontrols();
+//loginwithfb();
 
     }
-    private void initializecontrols(){
-        callbackManager=CallbackManager.Factory.create();
-        login_button=(ImageView) findViewById(R.id.facebook);
-    }
-    private void loginwithfb(){
-        LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                loginfb.setText("Login Success"+loginResult.getAccessToken());
-Intent i=new Intent(HomeActivity.this,level.class);
-startActivity(i);
-            }
+//    private void initializecontrols(){
+//
+//
+//    }
 
-            @Override
-            public void onCancel() {
-loginfb.setText("Login Cancelled");
-            }
+//    private void loginwithfb(){
+//        LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+//            @Override
+//            public void onSuccess(LoginResult loginResult) {
+//                loginfb.setText("Login Success"+loginResult.getAccessToken());
+//Intent i=new Intent(HomeActivity.this,level.class);
+//startActivity(i);
+//            }
+//
+//            @Override
+//            public void onCancel() {
+//loginfb.setText("Login Cancelled");
+//            }
+//
+//            @Override
+//            public void onError(FacebookException error) {
+//loginfb.setText("Error Occured:"+error.getMessage());
+//            }
+//        });
+//    }
 
-            @Override
-            public void onError(FacebookException error) {
-loginfb.setText("Error Occured:"+error.getMessage());
-            }
-        });
-    }
 
-      @Override
-      protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-          callbackManager.onActivityResult(requestCode, resultCode, data);
-          super.onActivityResult(requestCode, resultCode, data);
-      }
     private void registerUser(){
         String email=editTextEmail.getText().toString().trim();
         String password=editTextPassword.getText().toString().trim();
