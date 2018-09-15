@@ -25,9 +25,14 @@ private Button buttonLogout;
             finish();
             startActivity(new Intent(this,signup.class));
         }
+        
 FirebaseUser user=firebaseAuth.getCurrentUser();
+
         textViewUserEmail=(TextView)findViewById(R.id.email);
-        textViewUserEmail.setText("Welcome"+"  "+user.getEmail());
+
+            textViewUserEmail.setText("Welcome" + "  " + user.getEmail());
+
+
         buttonLogout=(Button)findViewById(R.id.logout);
         //get rating bar objectr
         RatingBar bar=(RatingBar)findViewById(R.id.ratingBar1);
@@ -40,19 +45,24 @@ FirebaseUser user=firebaseAuth.getCurrentUser();
         int score= b.getInt("score");
         //display score
         bar.setRating(score);
-        switch (score)
-        {
-            case 0: t.setText("You scored 0%, keep learning");
+        switch (score) {
+            case 0:
+                t.setText("You scored 0%, keep learning");
                 break;
-            case 1: t.setText("You have 20%, study better");
+            case 1:
+                t.setText("You have 20%, study better");
                 break;
-            case 2: t.setText("You have 40%, keep learning");
+            case 2:
+                t.setText("You have 40%, keep learning");
                 break;
-            case 3: t.setText("You have 60%, good attempt");
+            case 3:
+                t.setText("You have 60%, good attempt");
                 break;
-            case 4:t.setText("You have 80% Hmmmm.. maybe you have been reading a lot of AndroidProgramming quiz");
+            case 4:
+                t.setText("You have 80% Hmmmm.. maybe you have been reading a lot of AndroidProgramming quiz");
                 break;
-            case 5:t.setText(" Whao, you have 100%, Who are you? An Android Jet brain");
+            case 5:
+                t.setText(" Whao, you have 100%, Who are you? An Android Jet brain");
                 break;
         }
         buttonLogout.setOnClickListener(this);

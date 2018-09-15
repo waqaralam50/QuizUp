@@ -100,16 +100,19 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-
         android:clickable="true"
+        android:freezesText="true"
+
         android:text="@string/new_account"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623"
+        app:layout_constraintVertical_bias="0.658"
         tools:textColor="@android:color/holo_red_dark" />
 
 </android.support.constraint.ConstraintLayout>
