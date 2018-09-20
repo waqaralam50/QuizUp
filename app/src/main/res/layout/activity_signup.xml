@@ -83,17 +83,19 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-
+        android:background="@drawable/rr"
         android:clickable="true"
+        android:paddingLeft="50dp"
+        android:paddingTop="8dp"
         android:text="@string/new_register"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.856"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.733"
+        app:layout_goneMarginLeft="10dp"
         tools:textColor="@android:color/holo_red_dark" />
 
 
