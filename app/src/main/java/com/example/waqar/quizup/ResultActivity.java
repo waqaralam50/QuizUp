@@ -16,6 +16,8 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
 private FirebaseAuth firebaseAuth;
 private TextView textViewUserEmail;
 private Button buttonLogout;
+    private Button tryagain;
+    private Button highscore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,8 @@ FirebaseUser user=firebaseAuth.getCurrentUser();
         textViewUserEmail=(TextView)findViewById(R.id.email);
         textViewUserEmail.setText("Welcome"+"  "+user.getEmail());
         buttonLogout=(Button)findViewById(R.id.logout);
+        tryagain=(Button)findViewById(R.id.tryagain);
+        highscore=(Button)findViewById(R.id.highscore);
         //get rating bar objectr
         RatingBar bar=(RatingBar)findViewById(R.id.ratingBar1);
         bar.setNumStars(5);
@@ -56,6 +60,8 @@ FirebaseUser user=firebaseAuth.getCurrentUser();
                 break;
         }
         buttonLogout.setOnClickListener(this);
+        tryagain.setOnClickListener(this);
+        highscore.setOnClickListener(this);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -82,5 +88,14 @@ if (v==buttonLogout){
     finish();
     startActivity(new Intent(this,signup.class));
 }
+if (v==tryagain){
+    Intent i=new Intent(this,level.class);
+    startActivity(i);
+
+}
+        if (v==highscore){
+
+
+        }
     }
 }

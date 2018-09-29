@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="228dp"
+        android:layout_marginBottom="226dp"
         android:orientation="vertical">
 
 
@@ -35,11 +35,11 @@
 
     <TextView
         android:id="@+id/email"
-        android:layout_width="360dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="201dp"
         android:background="@drawable/rectangle3"
         android:inputType="textImeMultiLine"
         android:paddingLeft="15dp"
@@ -48,13 +48,32 @@
         android:textSize="20dp" />
 
     <Button
+        android:id="@+id/highscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="169dp"
+        android:background="@drawable/r"
+        android:text="HighScore" />
+
+    <Button
+        android:id="@+id/tryagain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="104dp"
+        android:background="@drawable/r"
+        android:text="Try Again" />
+
+    <Button
         android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="125dp"
-        android:text="Logout"
-        android:background="@drawable/r"/>
-
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/r"
+        android:text="Logout" />
 </RelativeLayout>

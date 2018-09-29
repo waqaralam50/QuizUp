@@ -19,12 +19,12 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/r"
         android:ems="10"
-        android:text="Register"
+        android:text="Register!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.779" />
+        app:layout_constraintVertical_bias="0.777" />
 
     <EditText
         android:id="@+id/editText"
@@ -64,13 +64,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.908"
+        app:layout_constraintVertical_bias="0.859"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editText3"
         android:layout_width="318dp"
-        android:layout_height="47dp"
+        android:layout_height="51dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -90,10 +90,33 @@
         app:layout_constraintTop_toBottomOf="@+id/editText"
         app:layout_constraintVertical_bias="0.13" />
 
+    <EditText
+        android:id="@+id/repass"
+        android:layout_width="318dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/w"
+        android:drawableLeft="@drawable/confpas"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Re-enter Password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintVertical_bias="0.614" />
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="236dp"
-        android:layout_height="27dp"
+        android:layout_width="268dp"
+        android:layout_height="26dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -111,7 +134,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623"
+        app:layout_constraintVertical_bias="0.929"
         tools:textColor="@android:color/holo_red_dark" />
 
 </android.support.constraint.ConstraintLayout>
