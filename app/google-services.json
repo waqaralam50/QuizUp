@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "984345157968-788ns2ovpv0rm750j4rq52nao2mrbboq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.waqar.quizup",
+            "certificate_hash": "3b62119b31a29b9fd67c31d408575b67f070a172"
+          }
+        },
+        {
           "client_id": "984345157968-hokvj9t4ekp2lg9sevdhe4m449or92fq.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984345157968-hokvj9t4ekp2lg9sevdhe4m449or92fq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
